@@ -16,3 +16,5 @@ button {
 button:hover {
     color: white;
 }
+
+.space { margin-top: 300px; }
