@@ -5,3 +5,9 @@ body {
   margin: 15px;
   color: White;
 }
+
+a.button {
+    background-color: black;
+    color: black;
+    border: none;
+}
