@@ -6,12 +6,12 @@ body {
   color: White;
 }
 
-a.button {
+button {
     background-color: black;
     color: black;
     border: none;
 }
 
-a.button:hover {
+button:hover {
     background-color: #110000;
 }
