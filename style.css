@@ -12,14 +12,6 @@ a.button {
     border: none;
 }
 
-a.button.disabled {
-  pointer-events: none;
-}
-
-a.button.enabled {
-  pointer-events: all;
-}
-
 a.button:hover {
     background-color: #110000;
 }
