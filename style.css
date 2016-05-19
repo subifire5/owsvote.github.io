@@ -10,6 +10,7 @@ button {
     background-color: black;
     color: black;
     border: none;
+    font-size: 32px;
 }
 
 button:hover {
