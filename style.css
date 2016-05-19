@@ -10,15 +10,6 @@ a.button {
     background-color: black;
     color: black;
     border: none;
-    pointer-events: all;
-}
-
-a.button.disabled {
-  pointer-events: none;
-}
-
-a.button.disabled {
-  pointer-events: all;
 }
 
 a.button:hover {
