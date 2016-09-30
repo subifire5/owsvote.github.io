@@ -54,7 +54,7 @@ function component(width, height, color, x, y) {
     this.y = y;
     this.update = function() {
         ctx = myGameArea.context;
-        ctx.fillStyle = color;
+        ctx.fillStyle = "red";
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
