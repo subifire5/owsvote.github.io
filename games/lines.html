@@ -14,7 +14,7 @@ button {
 }
 </style>
 <A HREF="games">Back</A><BR>
-    <button type="button" onclick="myGameArena.clear();">Clear!</button>
+<button type="button" onclick="myGameArea.clear();">Clear!</button>
 </head>
 <body onload="startGame()">
 
@@ -76,7 +76,6 @@ function updateGameArea() {
     if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 10; }
     myGamePiece.newPos();
     myGamePiece.update();
-    myGameArena.clear();
 }
 
 function getRndColor() {
