@@ -36,13 +36,13 @@ var myGameArea = {
         this.canvas.height = 600;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.interval = setInterval(updateGameArea, 20);
+        this.interval = setInterval(updateGameArea, 50);
         window.addEventListener('keydown', function (e) {
             myGameArea.keys = (myGameArea.keys || []);
-            myGameArea.keys[e.keyCode] = true;
+            myGameArea.keys[e.keyCode] = (e.type == "keydown");
         })
         window.addEventListener('keyup', function (e) {
-            myGameArea.keys[e.keyCode] = false;
+            myGameArea.keys[e.keyCode] = (e.type == "keydown");
         })
     },
     clear : function(){
