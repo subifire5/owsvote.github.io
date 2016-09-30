@@ -14,7 +14,7 @@ canvas {
 <body onload="startGame()">
 
 <script>
-var color = ["Red", "Green", "Blue"];
+var color = ["#FF0000", "#00FF00", "#0000FF"];
 var myGamePiece;
 var count = 0
 
@@ -54,7 +54,7 @@ function component(width, height, color, x, y) {
     this.y = y;
     this.update = function() {
         ctx = myGameArea.context;
-        ctx.fillStyle = "#FF0000";
+        ctx.fillStyle = color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
