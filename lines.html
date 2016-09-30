@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
 canvas {
     border:1px solid #d3d3d3;
@@ -14,8 +14,9 @@ canvas {
 <body onload="startGame()">
 
 <script>
-var color = "blue";
+var color = ["Red", "Green", "Blue"];
 var myGamePiece;
+var count = 0
 
 function startGame() {
     myGameArea.start();
@@ -54,7 +55,6 @@ function component(width, height, color, x, y) {
     this.update = function() {
         ctx = myGameArea.context;
         ctx.fillStyle = color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
         this.x += this.speedX;
@@ -65,11 +65,12 @@ function component(width, height, color, x, y) {
 function updateGameArea() {
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
-    if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -5; }
-    if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 5; }
-    if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -5; }
-    if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 5; }
-    if (myGameArea.key && myGameArea.key == 87) {color = "green"; }
+    if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -20; }
+    if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 20; }
+    if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -20; }
+    if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 20; }
+    this.color = color[count]
+    count += 1
     myGamePiece.newPos();
     myGamePiece.update();
 }
