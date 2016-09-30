@@ -70,7 +70,7 @@ function updateGameArea() {
     if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 10; }
     if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -10; }
     if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 10; }
-    myGamePiece.color[count];
+    myGamePiece.color = color[count];
     color+=1
     myGamePiece.newPos();
     myGamePiece.update();
