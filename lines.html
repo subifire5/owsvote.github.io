@@ -66,10 +66,10 @@ function component(width, height, color, x, y) {
 function updateGameArea() {
     myGamePiece.speedX = 0;
     myGamePiece.speedY = 0;
-    if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -20; }
-    if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 20; }
-    if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -20; }
-    if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 20; }
+    if (myGameArea.key && myGameArea.key == 37) {myGamePiece.speedX = -10; }
+    if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 10; }
+    if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -10; }
+    if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 10; }
     myGamePiece.color[count];
     color+=1
     myGamePiece.newPos();
