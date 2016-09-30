@@ -54,7 +54,7 @@ function component(width, height, color, x, y) {
     this.y = y;
     this.update = function() {
         ctx = myGameArea.context;
-        ctx.fillStyle = color;
+        ctx.fillStyle = getRndColor();
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
@@ -70,13 +70,17 @@ function updateGameArea() {
     if (myGameArea.key && myGameArea.key == 39) {myGamePiece.speedX = 10; }
     if (myGameArea.key && myGameArea.key == 38) {myGamePiece.speedY = -10; }
     if (myGameArea.key && myGameArea.key == 40) {myGamePiece.speedY = 10; }
-    color = color[count];
-    color+=1
     myGamePiece.newPos();
     myGamePiece.update();
 }
 
-
+function getRndColor() {
+    var r = 255*Math.random()|0,
+        g = 255*Math.random()|0,
+        b = 255*Math.random()|0;
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+}
+    
 </script>
 </body>
 </html>
