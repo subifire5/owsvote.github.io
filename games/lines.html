@@ -14,15 +14,15 @@ canvas {
 <A HREF="../gamelist">Back</A>
 <button type="button" onclick="myGameArea.clear();">Clear!</button><br>
 <p>Brush Size  <input type="range" min="5" max="50" value="5" step="5" onchange="showValue(this.value); myGamePiece.size(this.value);"/></a>
-<p>Window Size  <input type="text" name="winX" value = "Window X"><br>
-                <input type="text" name="winX" value = "Window Y">
-
 <span id="range">5</span>
+<p>Color Picker:  <input type="text" name="colorR" value="255" size="4" onchange="colorR = this.value">R<input type="text" name="colorR" value="255" size="4" onchange="colorG = this.value">G<input type="text" name="colorB" value="255" size="4" onchange="colorB = this.value">B</p>
+                 <p>Random Color    <input type="radio" name="randomColor" value="On" onchange="randomColor = true">On<input type="radio" name="randomColor" value="Off" onchange="randomColor = false">Off</a>
+
 </head>
 <body onload="startGame()">
 
 <script>
-var color = "#FF0000";
+var color = "blue";
 var myGamePiece;
 var count = 0
 
@@ -65,10 +65,16 @@ function component(width, height, color, x, y)
     this.speedY = 0;
     this.x = x;
     this.y = y;
+    this.randomColor = false
     this.update = function()
     {
         ctx = myGameArea.context;
-        ctx.fillStyle = getRndColor();
+        if (randomColor == true)
+        {
+          ctx.fillStyle = getRndColor();
+        } else {
+          ctx.fillStyle = rgb(colorR, colorG, colorB);
+        }
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function()
@@ -78,7 +84,6 @@ function component(width, height, color, x, y)
     }
     this.size = function(size)
     {
-      console.log('yeye')
       this.width = size;
       this.height = size;
     }
