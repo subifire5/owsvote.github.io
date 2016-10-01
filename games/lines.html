@@ -14,6 +14,9 @@ canvas {
 <A HREF="../gamelist">Back</A>
 <button type="button" onclick="myGameArea.clear();">Clear!</button><br>
 <p>Brush Size  <input type="range" min="5" max="50" value="5" step="5" onchange="showValue(this.value); myGamePiece.size(this.value);"/></a>
+<p>Window Size  <input type="text" name="winX" value = "Window X"><br>
+                <input type="text" name="winX" value = "Window Y">
+
 <span id="range">5</span>
 </head>
 <body onload="startGame()">
