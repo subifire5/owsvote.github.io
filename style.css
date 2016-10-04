@@ -16,3 +16,10 @@ button {
 .space {
     margin-top: 670px;
 }
+
+a:link {
+  color: white;
+}
+a:visited {
+  color: grey;
+}
