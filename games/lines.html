@@ -10,14 +10,14 @@ canvas {
 }
 
 </style>
-<br><br>
+<div style="align: right">
 <A HREF="../gamelist">Back</A>
 <button type="button" onclick="myGameArea.clear();">Clear!</button><br>
 <p>Brush Size  <input type="range" min="5" max="50" value="5" step="5" onchange="showValue(this.value); myGamePiece.size(this.value);"/></a>
 <span id="range">5</span>
 <p>Color Picker:  <input type="text" name="colorR" value="255" size="4" onchange="colorR = this.value">R<input type="text" name="colorR" value="255" size="4" onchange="colorG = this.value">G<input type="text" name="colorB" value="255" size="4" onchange="colorB = this.value">B</p>
                  <p>Random Color    <input type="radio" name="randomColor" value="On" onchange="randomColor = true">On<input type="radio" name="randomColor" value="Off" onchange="randomColor = false">Off</a>
-
+</div>
 </head>
 <body onload="startGame()">
 
