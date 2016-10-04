@@ -4,6 +4,9 @@
 <link rel="stylesheet" type="text/css" href="../style.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
+* {
+    font-size: 11px;
+}
 canvas {
     border:1px solid #FF0000;
     background-color: #333333;
@@ -18,7 +21,7 @@ canvas {
 <p>Color Picker:  <input type="text" name="colorR" value="255" size="4" onchange="colorR = this.value">R<input type="text" name="colorR" value="255" size="4" onchange="colorG = this.value">G<input type="text" name="colorB" value="255" size="4" onchange="colorB = this.value">B</p>
                  <p>Random Color    <input type="radio" name="randomColor" value="On" onchange="randomColor = true">On<input type="radio" name="randomColor" value="Off" onchange="randomColor = false">Off</a>
 </div>
-<p align="left">Click on the game window after changing settings!</p>
+<p align="left">Set color first and click on the game window after changing settings!</p>
 </head>
 <body onload="startGame()">
 
