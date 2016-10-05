@@ -22,5 +22,34 @@ var stage = new PIXI.Container();
 
 //Tell the `renderer` to `render` the `stage`
 renderer.render(stage);
+ 
+  
+// Game
+var rectangle = new Graphics();
+rectangle.beginFill(0x66CCFF);
+rectangle.lineStyle(4, 0xFF3300, 1);
+rectangle.drawRect(x, y, width, height);
+  
+// Functions
+function keyboard(keyCode) {
+  var key = {};
+  key.code = keyCode;
+  key.isDown = false;
+  key.isUp = true;
+  key.press = undefined;
+  key.release = undefined;
+  //The `downHandler`
+  key.downHandler = function(event) {
+    if (event.keyCode === key.code) {
+      if (key.isUp && key.press) key.press();
+      key.isDown = true;
+      key.isUp = false;
+    }
+    event.preventDefault();
+  };
+
+  //The `upHandler`
+  key.upHandler = function(event) {
+    if (event.keyCode 
 </script>
 </body>
