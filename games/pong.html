@@ -1,36 +1,42 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="../style.css">
-	<title>Pixi.js Testing</title>
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: #994444;
-		}
-	</style>
-	<script src="pixi.js"></script>
+	<meta charset="UTF-8">
+	<title>Pong!</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-	<script>
- 
+<script>
 	
-
-	// Autodetect, create and append the renderer to the body element
-        var renderer = PIXI.autoDetectRenderer(720, 364, { backgroundColor: 0x000000, antialias: true });
-        document.body.appendChild(renderer.view);
-
-        // Create the main stage for your display objects
-        var stage = new PIXI.Container();
-
+var WIDTH=700, HEIGHT=600, pi=Math.PI;
+var canvas, ctx, keystate;
+var player, ai, ball;	
 	
-        function animate() {
-            	//Render the stage
-            	renderer.render(stage);
-        	requestAnimationFrame(animate);
-	}			
+function main() {
+	canvas = document.createElement("canvas");
+	canvas.width = WIDTH;
+	canvas.height = HEIGHT;
+	ctx = canvas.getContext("2d");
+	document.body.appendChild(canvas);
+	
+	init();
+	
+	var loop = function() {
+		update();
+		draw();
+		
+		window.requestAnimationFrame(loop, canvas);
+	}
+	window.requestAnimationFrame(loop, canvas);
+		
+}
+	
+function init() {}
+	
+function update() {}
+	
+	
+main();
 </script>
-	 
 </body>
 </html>
