@@ -24,22 +24,7 @@
         // Create the main stage for your display objects
         var stage = new PIXI.Container();
 
-	// create a new graphics object
-	var graphics = new PIXI.Graphics();
 	
-	// begin a green fill..
-	graphics.beginFill(0x00FF00);
-	
-	// draw a triangle using lines
-	graphics.moveTo(0,0);
-	graphics.lineTo(-50, 100);
-	graphics.lineTo(50, 100);
-	
-	// end the fill
-	graphics.endFill();
-	
-	// add it the stage so we see it on our screens..
-	stage.addChild(graphics);
         function animate() {
             	//Render the stage
             	renderer.render(stage);
