@@ -32,14 +32,11 @@
 	graphics.drawRect(5, 5, 10, 100);
 	graphics.endFill();
 		
+	stage.addChild(graphics);
 	function animate() {
 		
-		requestAnimFrame( animate );
-
-	    	
-		
-	    	// render the stage
 	    	renderer.render(stage);
+		requestAnimFrame( animate );
 	}
 
 	
