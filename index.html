@@ -15,11 +15,11 @@
   <a href="tools">Recommended Tools</a><br>
   <a href="gamelist">Games</a><br>
   
-  <script src="https://craig.global.ssl.fastly.net/js/mousetrap/mousetrap.min.js" 
+  <script src="//cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js" 
           type="text/javascript"></script>
   <script>
     var eggToggle = 0
-    Mousetrap.bind('e g g', function() {
+    cheet('e g g', function () {
       if (eggToggle == 0) {
         document.body.style.backgroundImage = "url('http://i.imgur.com/wWzdFwU.gif')";
         eggToggle = 1;
@@ -27,6 +27,9 @@
         document.body.style.background = "#000000";
         eggToggle = 0;
       }
+    });
+    cheet('i d d q d', function () {
+      alert('God mode enabled!');
     });
   </script>
 </BODY>
