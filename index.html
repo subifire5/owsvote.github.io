@@ -10,7 +10,7 @@
 <CENTER>
   <h1>Welcome to Nocrno's Site!</h1>
 </CENTER>
-  
+  <canvas id="myCavas"></canvas>
   <a href="code">Code I've done</a><br>
   <a href="tools">Recommended Tools</a><br>
   <a href="gamelist">Games</a><br>
@@ -28,9 +28,20 @@
         eggToggle = 0;
       }
     });
-    cheet('i d d q d', function () {
-      alert('God mode enabled!');
+    cheet('e m u', function () {
+      
     });
+    
+    var c = document.getElementById("myCanvas")
+    var ctx = c.getContext("2d");
+    ctx.moveTo(0,0);
+    setInterval(draw, 10);
+    draw() {
+      var ctx = (a canvas context);
+      ctx.canvas.width  = window.innerWidth;
+      ctx.canvas.height = window.innerHeight;
+    }
+    
   </script>
 </BODY>
 </HTML>
