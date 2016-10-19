@@ -7,6 +7,9 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </HEAD>
 <BODY>
+  <style>
+    #canvas { pointer-events:none; }
+  </style>
   <canvas id="myCanvas" style="position:fixed;top:0;left:0>"></canvas>
  <CENTER>
   <h1>Welcome to Nocrno's Site!</h1><br><br>
@@ -38,7 +41,7 @@
     // Change thi
     var c = document.getElementById("myCanvas")
     var ctx = c.getContext("2d");
-    ctx.moveTo(50,0);
+    ctx.moveTo(0,0);
     ctx.canvas.width  = window.innerWidth;
     console.log(window.innderWidth);
     ctx.canvas.height = window.innerHeight;
