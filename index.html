@@ -37,6 +37,8 @@
     var ctx = c.getContext("2d");
     ctx.moveTo(0,0);
     setInterval(draw, 10);
+    ctx.lineTo(300, 500);
+    ctx.stroke();
     function draw() {
       ctx.canvas.width  = window.innerWidth;
       ctx.canvas.height = window.innerHeight;
