@@ -29,7 +29,7 @@
       }
     });
     cheet('e m u', function () {
-
+      ctx.drawImage(emu, 0, 0);
     });
 
     var c = document.getElementById("myCanvas")
@@ -38,9 +38,7 @@
     ctx.canvas.width  = window.innerWidth;
     ctx.canvas.height = window.innerHeight;
     var emu = new Image();
-    emu.onload = function () {
-       ctx.drawImage(emu, 0, 0);
-    }
+    emu.onload = function () { }
     emu.src = "http://vignette2.wikia.nocookie.net/zt2downloadlibrary/images/4/4f/Emu_Ludozoo.png/revision/latest?cb=20150131045925";
   </script>
 </BODY>
