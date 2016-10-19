@@ -34,11 +34,11 @@
     });
 
     var c = document.getElementById("myCanvas")
+    var img = document.getElementById("emu");
     var ctx = c.getContext("2d");
     ctx.moveTo(0,0);
     setInterval(draw, 10);
-    ctx.lineTo(300, 500);
-    ctx.stroke();
+    ctx.drawImage(img,50,50);
     function draw() {
       ctx.canvas.width  = window.innerWidth;
       ctx.canvas.height = window.innerHeight;
