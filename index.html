@@ -30,6 +30,8 @@
     });
     cheet('e m u', function () {
       ctx.drawImage(emu, 0, 0);
+      animate = 1
+      setInterval(rain, 10)
     });
     // Change this crap
     var c = document.getElementById("myCanvas")
@@ -42,6 +44,12 @@
     var emu = new Image();
     emu.onload = function () { }
     emu.src = "http://vignette2.wikia.nocookie.net/zt2downloadlibrary/images/4/4f/Emu_Ludozoo.png/revision/latest?cb=20150131045925";
+    function rain() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);  // clear canvas
+      ctx.drawImage(imgTag, x, y);                       // draw image at current position
+      x -= 4;
+      if (x > 250) { clearInterval(rain); }
+    }
   </script>
 </BODY>
 </HTML>
