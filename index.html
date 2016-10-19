@@ -35,17 +35,13 @@
     var c = document.getElementById("myCanvas")
     var ctx = c.getContext("2d");
     ctx.moveTo(0,0);
+    ctx.canvas.width  = window.innerWidth;
+    ctx.canvas.height = window.innerHeight;
     var emu = new Image();
     emu.onload = function () {
        ctx.drawImage(emu, 0, 0);
     }
     emu.src = "http://vignette2.wikia.nocookie.net/zt2downloadlibrary/images/4/4f/Emu_Ludozoo.png/revision/latest?cb=20150131045925";
-    setInterval(draw, 10);
-    function draw() {
-      ctx.canvas.width  = window.innerWidth;
-      ctx.canvas.height = window.innerHeight;
-    }
-
   </script>
 </BODY>
 </HTML>
