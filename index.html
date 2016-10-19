@@ -29,8 +29,8 @@
       }
     });
     cheet('e m u', function () {
-      x = -50
-      y = ctx.canvas.width/2
+      x = ctx.canvas.width/2
+      y = -50
       ctx.drawImage(emu, 0, 0);
       setInterval(rain, 10)
     });
@@ -50,7 +50,7 @@
     function rain() {
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);  // clear canvas
       ctx.drawImage(emu, x, y);                       // draw image at current position
-      x -= 4;
+      y -= 4;
       if (x > ctx.canvas.height) { clearInterval(rain); }
     }
   </script>
