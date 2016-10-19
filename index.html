@@ -43,9 +43,11 @@
     var emu = new Image();
     emu.onload = function () { }
     emu.src = "http://vignette2.wikia.nocookie.net/zt2downloadlibrary/images/4/4f/Emu_Ludozoo.png/revision/latest?cb=20150131045925";
+
+
     function rain() {
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);  // clear canvas
-      ctx.drawImage(imgTag, x, y);                       // draw image at current position
+      ctx.drawImage(emu, x, y);                       // draw image at current position
       x -= 4;
       if (x > 250) { clearInterval(rain); }
     }
