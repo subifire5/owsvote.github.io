@@ -51,6 +51,7 @@
     function rain() {
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); // clear
       // First Emu
+      ctx.rotate(20*Math.PI/180);
       ctx.drawImage(emu, x, y);                      
       //
       // Second Emu
