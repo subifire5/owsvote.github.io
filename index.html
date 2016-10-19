@@ -33,13 +33,13 @@
     });
 
     var c = document.getElementById("myCanvas")
+    var ctx = c.getContext("2d");
     ctx.moveTo(0,0);
     var img = new Image();
     img.onload = function () {
        context.drawImage(img, 0, 0);
     }
     img.src = "http://vignette2.wikia.nocookie.net/zt2downloadlibrary/images/4/4f/Emu_Ludozoo.png/revision/latest?cb=20150131045925";
-    var ctx = c.getContext("2d");
     setInterval(draw, 10);
     function draw() {
       ctx.canvas.width  = window.innerWidth;
