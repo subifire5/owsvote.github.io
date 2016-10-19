@@ -34,7 +34,7 @@
     });
 
     var c = document.getElementById("myCanvas")
-    var ctx = ("2d");
+    var ctx = c.getContext("2d");
     ctx.moveTo(0,0);
     setInterval(draw, 10);
     function draw() {
