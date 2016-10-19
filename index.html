@@ -30,9 +30,10 @@
     });
     cheet('e m u', function () {
       x = ctx.canvas.width/2
+      x = x - 100
       y = -50
       ctx.drawImage(emu, x, y);
-      setInterval(rain, 100)
+      setInterval(rain, 50)
     });
     // Change thi
     var c = document.getElementById("myCanvas")
