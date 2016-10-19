@@ -34,12 +34,12 @@
 
     var c = document.getElementById("myCanvas")
     var ctx = c.getContext("2d");
-    emu.src = "http://vignette2.wikia.nocookie.net/zt2downloadlibrary/images/4/4f/Emu_Ludozoo.png/revision/latest?cb=20150131045925";
     ctx.moveTo(0,0);
     var emu = new Image();
     emu.onload = function () {
        ctx.drawImage(emu, 0, 0);
     }
+    emu.src = "http://vignette2.wikia.nocookie.net/zt2downloadlibrary/images/4/4f/Emu_Ludozoo.png/revision/latest?cb=20150131045925";
     setInterval(draw, 10);
     function draw() {
       ctx.canvas.width  = window.innerWidth;
