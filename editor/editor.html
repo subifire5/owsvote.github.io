@@ -8,5 +8,8 @@
                 var e = ace.edit("e");
                 e.setTheme("ace/theme/monokai");
                 e.getSession().setMode("ace/mode/javascript");
+              function syntax(hai) {
+                e.getSession().setMode("ace/mode/" + hai)
+              }
             </script>
 </html>
