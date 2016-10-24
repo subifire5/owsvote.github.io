@@ -38,6 +38,7 @@
       x3 = Math.floor((Math.random() * ctx.canvas.width) + 1);
       x = x - 100
       y = -50
+      r = 0
       setInterval(rain, 20)
     });
     // Change thi
@@ -55,12 +56,33 @@
 
     function rain() {
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); // clear
-      ctx.drawImage(emu, x, y);
-      ctx.drawImage(emu, x2, y)
-      ctx.drawImage(emu, x3, y)
-      // Second Emu
+      ctx.drawErmage(emu, r, x, y);
+      ctx.drawErmage(emu, r, x2, y)
+      ctx.drawErmage(emu, r, x3, y)
+      r += 2
       y += 2;
       if (x > ctx.canvas.height) { clearInterval(rain); }  // Test if done, than stop interval
+    }
+
+    function drawErmage(image, deg, x, y){
+      context.clearRect(0,0,canvas.width,canvas.height);
+
+      // save the unrotated context of the canvas so we can restore it later
+      // the alternative is to untranslate & unrotate after drawing
+      context.save();
+
+      // move to the center of the canvas
+      context.translate(canvas.width/2,canvas.height/2);
+
+      // rotate the canvas to the specified degrees
+      context.rotate(deg*Math.PI/180);
+
+      // draw the image
+      // since the context is rotated, the image will be rotated also
+      context.drawImage(image,x,y);
+
+      // we’re done with the rotating so restore the unrotated context
+      context.restore();
     }
   </script>
 </BODY>
