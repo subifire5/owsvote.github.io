@@ -33,9 +33,10 @@
     });
     cheet('e m u', function () {
       x = ctx.canvas.width/2
+      x2 = x/2
+      x3 = x2 + x
       x = x - 100
       y = -50
-      ctx.drawImage(emu, x, y);
       setInterval(rain, 20)
     });
     // Change thi
@@ -53,12 +54,11 @@
 
     function rain() {
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height); // clear
-      // First Emu
-      ctx.drawImage(emu, x, y);                      
-      //
+      ctx.drawImage(emu, x, y);
+      ctx.drawImage(emu, x2, y)
       // Second Emu
       y += 2;
-      if (x > ctx.canvas.height) { clearInterval(rain); }  // Test if done
+      if (x > ctx.canvas.height) { clearInterval(rain); }  // Test if done, than stop interval
     }
   </script>
 </BODY>
