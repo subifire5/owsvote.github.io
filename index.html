@@ -65,24 +65,24 @@
     }
 
     function drawErmage(image, deg, x, y){
-      ctx.clearRect(0,0,canvas.width,canvas.height);
+      context.clearRect(0,0,canvas.width,canvas.height);
 
-      // save the unrotated ctx of the canvas so we can restore it later
+      // save the unrotated context of the canvas so we can restore it later
       // the alternative is to untranslate & unrotate after drawing
-      ctx.save();
+      context.save();
 
       // move to the center of the canvas
-      ctx.translate(canvas.width/2,canvas.height/2);
+      context.translate(canvas.width/2,canvas.height/2);
 
       // rotate the canvas to the specified degrees
-      ctx.rotate(deg*Math.PI/180);
+      context.rotate(deg*Math.PI/180);
 
       // draw the image
-      // since the ctx is rotated, the image will be rotated also
-      ctx.drawImage(image,x,y);
+      // since the context is rotated, the image will be rotated also
+      context.drawImage(image,x,y);
 
-      // we’re done with the rotating so restore the unrotated ctx
-      ctx.restore();
+      // we’re done with the rotating so restore the unrotated context
+      context.restore();
     }
   </script>
 </BODY>
