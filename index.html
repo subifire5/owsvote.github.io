@@ -32,9 +32,9 @@
       }
     });
     cheet('e m u', function () {
-      x = ctx.canvas.width/2
-      x2 = x/2
-      x3 = x2 + x
+      x = Math.floor((Math.random() * ctx.canvas.width) + 1);
+      x2 = Math.floor((Math.random() * ctx.canvas.width) + 1);
+      x3 = Math.floor((Math.random() * ctx.canvas.width) + 1);
       x = x - 100
       y = -50
       setInterval(rain, 20)
