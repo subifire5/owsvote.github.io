@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> The Pamphlet</title>
+        <style>
+            body{
+                
+                background-color: gray;
+            }
+            h1 {
+                color: black;
+                font-family: "Lucida Sans Unicode", Lucida Grande,  sans-serif;
+                background-color: #cccccc;
+                width: 200 px;
+                border: 1px solid black;
+                padding: 16px; /* this is the space between heading and border */
+                border-radius: 50px; /*this rounds the corners*/
+                
+            }
+            
+            p {
+                font-size: 80%;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #8a84a4;
+                border: 1px solid black;
+                padding: 16px;
+                border-radius: 20px;
+            }
+        </style>
+
+    </head>
+    <body>
+ 
+
+
+
+        <h1 id="head1"> heading</h1>
+        <p> this is paragraph</p>
+    </body>
+</html>
